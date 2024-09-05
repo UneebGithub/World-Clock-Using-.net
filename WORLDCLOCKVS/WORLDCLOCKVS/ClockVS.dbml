@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ClockVS" Class="ClockVSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PDSAB38\SQLEXPRESS;Initial Catalog=ClockVS;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="WORLDCLOCKVS.Properties.Settings" SettingsPropertyName="ClockVSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.clock" Member="clocks">
+    <Type Name="clock">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clock_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="time_zone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="times" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HMS" Member="HMs">
+    <Type Name="HM">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="H" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="M" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="S" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AM_Pm" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SetAlarm" Member="SetAlarms">
+    <Type Name="SetAlarm">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="H" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="M" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="S" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="yes_no" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AM_Pm" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SetAlarm" Member="SetAlarm1s">
+    <Type Name="SetAlarm1">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="H" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="M" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="S" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="yes_no" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AM_Pm" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.World_Clock" Member="World_Clocks">
+    <Type Name="World_Clock">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="H" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="M" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="S" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Namaz_Timer" Member="Namaz_Timers">
+    <Type Name="Namaz_Timer">
+      <Column Name="Namaz_Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.loginn" Member="loginns">
+    <Type Name="loginn">
+      <Column Name="USER_REG" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userpass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

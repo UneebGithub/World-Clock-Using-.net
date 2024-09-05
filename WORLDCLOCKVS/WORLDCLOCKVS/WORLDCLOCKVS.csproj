@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1A1C535-F54E-4947-B8AA-DA5A87E54765}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WORLDCLOCKVS</RootNamespace>
+    <AssemblyName>WORLDCLOCKVS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Reg.Designer.cs">
+      <DependentUpon>Add Reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clock.Designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClockVS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClockVS.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Namaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Namaz.Designer.cs">
+      <DependentUpon>Namaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarm.Designer.cs">
+      <DependentUpon>SetAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetClock.Designer.cs">
+      <DependentUpon>SetClock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StopWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StopWatch.Designer.cs">
+      <DependentUpon>StopWatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TIMERcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TIMERcs.Designer.cs">
+      <DependentUpon>TIMERcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorldClock.Designer.cs">
+      <DependentUpon>WorldClock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Reg.resx">
+      <DependentUpon>Add Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Namaz.resx">
+      <DependentUpon>Namaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetAlarm.resx">
+      <DependentUpon>SetAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetClock.resx">
+      <DependentUpon>SetClock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopWatch.resx">
+      <DependentUpon>StopWatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMERcs.resx">
+      <DependentUpon>TIMERcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldClock.resx">
+      <DependentUpon>WorldClock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClockVS.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClockVS.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClockVS.dbml.layout">
+      <DependentUpon>ClockVS.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-05 at 8.57.57 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-clock-icon-vector-png-png-image_5966528.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
